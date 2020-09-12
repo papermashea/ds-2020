@@ -161,18 +161,20 @@
 var request = require('request');
 var fs = require('fs');
 
-// var a = for (let a = 0; a < 10; a++) {
-//         print('https://parsons.nyc/aa/m00'+1'.html')}
-
+//LOOPING URL ARRARY
 var urlsList = ['https://parsons.nyc/aa/m01.html','https://parsons.nyc/aa/m02.html','https://parsons.nyc/aa/m03.html','https://parsons.nyc/aa/m04.html','https://parsons.nyc/aa/m05.html'];
 var allPages = urlsList.length;
 for (var i = 0; i < allPages; i++) {
     console.log(urlsList[i]);
  
-// request(urls, function(error, response, body){
-//     if (!error && response.statusCode == 200) {
-//         fs.writeFileSync(`${__dirname}/data/aa2/00.txt`, body);
-//     }else{
-//         console.log(`GET request failed: ${response.statusCode} "${response.statusMessage}"`)
-//     }
+//LOOPING STRING NUMBERS
+// var a = for (let a = 01; a < 10; a++) {
+//         console.log('https://parsons.nyc/aa/m' + 1 '.html')};
+
+request(urls, function(error, response, body){
+    if (!error && response.statusCode == 200) {
+        fs.writeFileSync(`${__dirname}/data/aa2/00.txt`, body);
+    }else{
+        console.log(`GET request failed: ${response.statusCode} "${response.statusMessage}"`)
+    }
 };
