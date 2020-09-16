@@ -7,7 +7,7 @@ The starter code ran without issue, and I ended up checking out "https://www.w3s
 
 ***
 
-##Investigation
+## Investigation
 
 ### Exploring in the browser
 As my student ID number is N00697093, I worked with 03.txt, listing AA meetings for Zone 3. 
