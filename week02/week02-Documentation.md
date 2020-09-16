@@ -10,7 +10,7 @@ I first took a look at "https://parsons.nyc/aa/m03.html" from the week01 assignm
 
 I then made a new folder for the cleaned data as I presume we will eventually be cleaning up all the data files. I saved my 03.txt document as an html into a the new folder in /data/ called /aa-clean/. By saving it as an html file, I was able to examine the colored syntax more easily than viewing the page source in the browser. 
 
-**Exploring in the browser**
+#### Exploring in the browser
 It was easiest for me to visually parse the relevant information for each meeting by looking in the browser. The relevant information for each meeting seems to break down into the following categories (or "options", in the filters):
 - Meeting title
 - Location *- this is sometimes messy with address*
@@ -21,7 +21,7 @@ It was easiest for me to visually parse the relevant information for each meetin
 - Wheelchair accessible
 - Notes (in the grey boxes i.e. 'detailsBox') *- this is inconsistent at best and are more often confusing than helpful. The most helpful pieces of information in these boxes are usually also listed in the "Special interest" category*
 
-**Examining the saved html**
+#### Examining the saved html
 After by passing the inline styles (ew), it appeared that basically every single element was hardcoded. The locations are stored as h4 tags with hardcoded breaks and bolds. I believe there are 74 meetings listed on this page based on the presence of 74 tr opening tags and 74 h4 opening tags.
 
 Fortunately, the locations are the only h4s. Unfortunately, the addresses specifically have no identifiers and the "Get Directions" links are also broken.
@@ -29,16 +29,16 @@ Fortunately, the locations are the only h4s. Unfortunately, the addresses specif
 ### Using text methods to collect addresses
 I am looking for everything that exists after an h4, break, bold text, another break. Alternately, I could wish I could select any "<td style="border-bottom:1px solid #e3e3e3; width:260px" valign="top">".
 
-**Selecting tr/td**
+#### Selecting tr/td
 I tried pulling all the 'tr td' and the console log was pulling for about 10 minutes, a lot of gibberish. Oops. After reading the cheerio documentation more closely, I have decided to grab all of the contents of the tds with widths of 260 and clean them up from there.
 
-**Selectors missing the mark**
+#### Selectors missing the mark
 I found that it was extremely easy to use .remove, .find and others to parse elements with the literally any objects/styling to them. Addresses were hard because they're just floating, alone in a string.
 
-** Trying to add classes for addresses**
+#### Trying to add classes for addresses
 Also found that there was no point in inserting html to create a class for addresses as there was no consistent HTML element to prepend a closing tag to (i.e. detailsBox wasn't always available to push a closing tag to). Plus, it felt pretty hacky.
 
-**Method**
+#### Method
 1. Get a whole text string of all the tds with the width 260
 2. Remove location, meetings names, lines breaks and detailsBox
 3. Wrap each address in a new class - still not sure how to test this
