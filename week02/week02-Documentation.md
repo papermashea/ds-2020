@@ -13,7 +13,8 @@ The starter code ran without issue, and I ended up checking out "https://www.w3s
 As my student ID number is N00697093, I worked with 03.txt, listing AA meetings for Zone 3. 
 I first took a look at "https://parsons.nyc/aa/m03.html" from the week01 assignment. It's hard to tell if the page is broken in multiple ways or if my 3+ ad blockers are breaking it, so I checked it in incognito mode in Chrome, Firefox, and Safari. The page seems broken in multiple ways.
 
-	It was easiest for me to visually parse the relevant information for each meeting by looking in the browser. The relevant information for each meeting seems to break down into the following categories (or "options", in the filters):
+It was easiest for me to visually parse the relevant information for each meeting by looking in the browser. The relevant information for each meeting seems to break down into the following categories (or "options", in the filters):
+	
 	- Meeting title
 	- Location 
 	- Address
