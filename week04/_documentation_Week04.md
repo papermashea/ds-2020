@@ -31,7 +31,7 @@ When I first ran the starter code, I encountered an error:
 
 	(node:7231) UnhandledPromiseRejectionWarning
 
-This was bevause I wasn't updating my code to the correct Endpoint in my RDS console, which I then noted in my comments.
+This was because I wasn't updating my code to the correct Endpoint in my RDS console, which I then noted in my comments.
 
 	// AWS RDS POSTGRESQL INSTANCE
 	dotenv.config(); 
@@ -142,7 +142,7 @@ I was able to create the database "aalocations" with the sample addresses for pr
 	ec2-user:~/environment/week04 $ 
 
 
-### Quesions
+### Questions
 - Is there any way to see the DB in RDS?
 - What are best practices for script file management?
 - How do you set a hard cap on # of calls?
