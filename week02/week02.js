@@ -84,33 +84,33 @@ let $ = cheerio.load(content
         
 
 // PULL LOCATIONS
-// let locations = []; 
-// $('h4').each(function(i, elem) {
-//   locations.push( $(elem).text().trim() );
-//     console.log(locations)
-// });
+let locations = []; 
+$('h4').each(function(i, elem) {
+  locations.push( $(elem).text().trim() );
+    console.log(locations)
+});
 
-// $('h4').addClass('location')
+$('h4').addClass('location')
 
 // PULL MEETING NAMES
-// let mtgName = [];
-// $('td[style*="border-bottom:1px solid #e3e3e3; width:260px"]').find('b').each(function(i, elem) {
-//   mtgName.push( $(elem).text().trim());
-//     // console.log(mtgName)
-// });
+let mtgName = [];
+$('td[style*="border-bottom:1px solid #e3e3e3; width:260px"]').find('b').each(function(i, elem) {
+  mtgName.push( $(elem).text().trim());
+    // console.log(mtgName)
+});
 
 // REMOVE SELECTOR ATTEMPT
-// let locAdd = [];
-// $('h4').remove('td[style*="border-bottom:1px solid #e3e3e3; width:260px"]').each(function(i, elem) {
-//   locAdd.push( $(elem).text().trim());
-//     // console.log(locAdd)
-// });
+let locAdd = [];
+$('h4').remove('td[style*="border-bottom:1px solid #e3e3e3; width:260px"]').each(function(i, elem) {
+  locAdd.push( $(elem).text().trim());
+    // console.log(locAdd)
+});
 
 // TRYING TO ADD A CLASS FOR ADDRESSES
-// let addresses = []
-// $('</b><br />').after('<div class="address').before.each(function(i, elem) {
-//   addresses.push( $(elem).html().trim());
-    // console.log(locAdd))
+let addresses = []
+$('</b><br />').after('<div class="address').before.each(function(i, elem) {
+  addresses.push( $(elem).html().trim());
+    console.log(locAdd)
 
 // PULL ADDRESSES
 let addresses = [];
@@ -139,5 +139,5 @@ $('td[style*="border-bottom:1px solid #e3e3e3; width:260px"]').remove('\n\t\t\t\
     // console.log(addresses)
 });
 
-// // WRITE ADDRESSES TO NEW DOCUMENT
+// WRITE ADDRESSES TO NEW DOCUMENT
 fs.writeFileSync('data/aa-clean/zone03-addresses.txt', addresses.join("\n"));

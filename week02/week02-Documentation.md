@@ -38,12 +38,6 @@ Fortunately, the locations are the only h4s. Unfortunately, the addresses specif
 ### Using text methods to collect addresses
 I am looking for everything that exists after an h4, break, bold text, another break. Alternately, I could wish I could select any "<td style="border-bottom:1px solid #e3e3e3; width:260px" valign="top">".
 
-#### Selecting tr/td
-I tried pulling all the 'tr td' and the console log was pulling for about 10 minutes, a lot of gibberish. Oops. After reading the cheerio documentation more closely, I have decided to grab all of the contents of the tds with widths of 260 and clean them up from there.
-
-#### Selectors missing the mark
-I found that it was extremely easy to use .remove, .find and others to parse elements with the literally any objects/styling to them. Addresses were hard because they're just floating, alone in a string.
-
 #### Trying to add classes for addresses
 Also found that there was no point in inserting html to create a class for addresses as there was no consistent HTML element to prepend a closing tag to (i.e. detailsBox wasn't always available to push a closing tag to). Plus, it felt pretty hacky.
 
@@ -52,12 +46,77 @@ Also found that there was no point in inserting html to create a class for addre
 	2. Remove location, meetings names, lines breaks and detailsBox
 	3. Wrap each address in a new class 
 
+#### Selecting tr/td
+I tried pulling all the 'tr td' and the console log was pulling for about 10 minutes, a lot of gibberish. Oops. After reading the cheerio documentation more closely, I have decided to grab all of the contents of the tds with widths of 260 and clean them up from there.
+
+		// PULL LOCATIONS
+	let locations = []; 
+	$('h4').each(function(i, elem) {
+	  locations.push( $(elem).text().trim() );
+	    console.log(locations)
+	});
+
+	$('h4').addClass('location')
+
+	// PULL MEETING NAMES
+	let mtgName = [];
+	$('td[style*="border-bottom:1px solid #e3e3e3; width:260px"]').find('b').each(function(i, elem) {
+	  mtgName.push( $(elem).text().trim());
+	    // console.log(mtgName)
+	});
+
+	// REMOVE SELECTOR ATTEMPT
+	let locAdd = [];
+	$('h4').remove('td[style*="border-bottom:1px solid #e3e3e3; width:260px"]').each(function(i, elem) {
+	  locAdd.push( $(elem).text().trim());
+	    // console.log(locAdd)
+	});
+
+#### Selectors missing the mark
+I found that it was extremely easy to use .remove, .find and others to parse elements with the literally any objects/styling to them. Addresses were hard because they're just floating, alone in a string.
+
+	// TRYING TO ADD A CLASS FOR ADDRESSES
+	let addresses = []
+	$('</b><br />').after('<div class="address').before.each(function(i, elem) {
+	  addresses.push( $(elem).html().trim());
+	    console.log(locAdd)
+
+	// PULL ADDRESSES
+	let addresses = [];
+
+	$('.detailsBox').empty(); //removing details
+	$('h4').empty(); //removing locations
+	$('b').empty(); //removing meeting names
+	$('img').empty(); //removing images + wheelchair text
+	$('a').empty(); //removing meeting names
+	$('span').empty(); //removing random spans
+	$('\n').replaceWith(""); //replacing random line breaks
+	$('\n\t\t\t\t\t\t').replaceWith(""); //replacing random line breaks
+	$('\n\t\t\t\t\t\t').remove(); //What IS this
+	// $('\n'+'\t').replaceWith(""); //
+	// $("\t").replaceWith(""); //
+	// $("\t").remove(); //
+
+
+	// $("h4","b","img","a","span",".detailsBox").empty(); // Why can't I combine .empty selectors?
+	// $('h4','b','img','a','span','.detailsBox').empty(); // Do quotes/apostrophes make a difference?
+
+
+	// ADDING A CLASS TO ADDRESSES
+	$('td[style*="border-bottom:1px solid #e3e3e3; width:260px"]').remove('\n\t\t\t\t\t\t').addClass('address').each(function(i, elem) {
+	  addresses.push( $(elem).text().trim());
+	    // console.log(addresses)
+	});
+
 ***
 
 ## Assignment Output
 
 ### Saving the file
 I was able to export several other asset types before I was able to save the addresses simply because they were easier to select. I have saved zone03-addresses.txt for the assignment.
+
+	// WRITE ADDRESSES TO NEW DOCUMENT
+	fs.writeFileSync('data/aa-clean/zone03-addresses.txt', addresses.join("\n"));
 
 ### Selecting the unselectable
 Ultimately, with this kind of cleanup, I think we were asked to work on addresses specifically because they were impossible to select on their own. There may be a way to select the text between two breaks, etc. within the strings, but I found working with Cheerio to be easier since the data was so inconsistent.
