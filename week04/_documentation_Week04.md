@@ -3,6 +3,10 @@
 ## Assignment Notes 
 I've always wanted to learn about SQL and this assignment made it really straightforward. I'm very interested in learning more about SQL and played around a little bit with the sqliteonline demo sets. Additionally, I found a very helpful resource on AWS shortcuts: https://docs.aws.amazon.com/cloud9/latest/user-guide/keybindings-default-apple-osx.html#keybindings-default-apple-osx-tabs so that I can more quickly switch between tabs and panes in my Cloup9 environment.
 
+### Normalizing data models
+![Ideal breakdown of AA Meeting Data Structure](/aaDataModel_normalized.png "AA Meeting Data Model")
+*Ideal breakdown of AA Meeting Data Structure*
+
 ***
 
 ## Setup
@@ -20,7 +24,7 @@ Capitals, etc removal
 ### Creating a table
 When I first ran the starter code, I encountered an error:
 
-```(node:7231) UnhandledPromiseRejectionWarning``
+```(node:7231) UnhandledPromiseRejectionWarning```
 
 This was bevause I wasn't updating my code to the correct Endpoint in my RDS console.
 
