@@ -47,7 +47,7 @@ I found that it was extremely easy to use .remove, .find and others to parse ele
 #### Trying to add classes for addresses
 Also found that there was no point in inserting html to create a class for addresses as there was no consistent HTML element to prepend a closing tag to (i.e. detailsBox wasn't always available to push a closing tag to). Plus, it felt pretty hacky.
 
-	**Ideal Method**
+	** Ideal Method **
 	1. Get a whole text string of all the tds with the width 260
 	2. Remove location, meetings names, lines breaks and detailsBox
 	3. Wrap each address in a new class 

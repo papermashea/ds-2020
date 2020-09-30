@@ -46,9 +46,9 @@ Given that address combined with city, state or with just zip code would be plen
 ### Errors
 A lot of errors in my accidentally ambitious locations pull look like this:
 
-    "FeatureMatchingResultType": "BrokenTie"
-    "ExceptionOccured": "False",
-    "RegionSizeUnits": "Meters",
+    ``` FeatureMatchingResultType": "BrokenTie" ```
+    ``` ExceptionOccured": "False", ```
+    ``` RegionSizeUnits": "Meters", ```
 
 ### Quesions
 - How do you work with a .env file in a different directory?
