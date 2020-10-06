@@ -1,7 +1,7 @@
 # Week 5: DynamoDB
 
 ## Assignment Notes 
-Aaron's videos seem to be slightly out of date, based on e2c interface options (i.e. modify iam role vs. attach iam role). This was easy to work around, the more difficult part of the assignment was exploring asyc/await in a forEach loop. I'm working with this write-up:https://codeburst.io/javascript-async-await-with-foreach-b6ba62bbf404?gi=b27bcf2d6bb7
+Aaron's videos seem to be slightly out of date, based on e2c interface options (i.e. modify iam role vs. attach iam role). This was easy to work around, the more difficult part of the assignment was exploring asyc/await in a forEach loop. I'm working with this write-up to troubleshoot my errors in adding to my DB: https://codeburst.io/javascript-async-await-with-foreach-b6ba62bbf404?gi=b27bcf2d6bb7
 
 ***
 
