@@ -9,18 +9,44 @@ Aaron's videos seem to be slightly out of date, based on e2c interface options (
 
 ### Dynamo Creation
 I had a difficult time understanding partitioning, but eventually played around enough with defaults and other resources to get the starter code to work. I'm still having errors asking for my partitioning keys, even after switching between 3-4 databases with varying 'aa' or 'pk' keys. 
-![partitioning databases, first shot.](/images/pk.png "Misunderstanding partitioning, jumped ahead.")
+![partitioning databases, first shot.](images/pk.png "Misunderstanding partitioning, jumped ahead.")
 
 ### Roles from the starter code
-Role creation from sample code
-![alt text for screen readers](/images/pk.png "Text to show on mouseover")
+Role creation from sample code was easy enough to follow along with, though I ended up making new roles straight from the "Modify IAM" settings: 
+![Updated IAM interface](images/modifyRole.png "AWS IAM interface")
+![Create new IAM role](images/createNew.png "AWS IAM interface")
 
 ### JS Classes
-Role creation from sample code
-![alt text for screen readers](/images/modifyRole.png "Text to show on mouseover")
-
-### Permissions
-I vaguely understand the Dynamo roles.
+JS classes seem easy enough to understand as they seem to work similarly to CSS classes. I'll be looking into time strings and array options within JS classes, but for this week I updated the starter code to align more with our final project:
+    class meeting {
+      constructor(primaryKey, name, venue, day, time, type, interest, accessible, remote) {
+        this.aa = {};
+        this.aa.N = primaryKey.toString(); // .N INDICATES NUMERIC
+        // this.aa = {};
+        // this.aa.N = primaryKey.toString(); // ATTEMPTED TO SOLVE FOR PARTITIONING ERROR
+        this.name = {};
+        this.name.S = name;
+        this.venue = {};
+        this.venue.S = venue;
+        this.day = {};
+        this.day.S = day;
+        this.time = {};
+        this.time.S = time;
+        // this.date = {}; 
+        // this.date.S = new Date(date).toDateString();
+        this.type = {};
+        this.type.S = type;
+        this.interest = {};
+        this.interest.S = interest;
+        this.accessible = {};
+        this.accessible.BOOL = accessible;
+        this.remote = {};
+        this.remote.BOOL = remote;
+        if (remote != null) { // UNINCLUDE A BOOLEAN VALUE FROM THE ITEM
+          this.remote = {};
+          this.remote.SS = remote; 
+        }
+      }
 
 ***
 
@@ -46,7 +72,7 @@ Tried making a new table to get around the error re: partitioning, didn't work.
 
 ### Success in DB population
 Was able to successfully add to the starter db
-![alt text for screen readers](/images/dbPop.png "Text to show on mouseover")
+![alt text for screen readers](images/dbPop.png "Text to show on mouseover")
 
 ### Adding a loop
 async forEach
