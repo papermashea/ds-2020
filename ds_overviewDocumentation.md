@@ -6,6 +6,12 @@ Resources and thoughts for this class are kept in an ongoing series of weekly no
 - [Class notes](https://docs.google.com/document/d/1TGFFYZfXPyAZpap8FBsq6vD8KSEmiB03ksjBFRtsUbQ/edit?usp=sharing "Data Structures Fall 2020 Discussions - Shea Molloy")
 - [Reading notes](https://docs.google.com/document/d/1E5LFa9ca3eHIMyJJ-Hp2Cqr9vzC6MIaB-KGju7nFn4w/edit?usp=sharing "Data Structures Fall 2020 Readings - Shea Molloy")
 
+## Presentations
+- [Discussion Lead 1: Paper As Passion](https://docs.google.com/document/d/11zYqZp_TxuLrwfQAd7jegNX4pO5cocWW5BpTvMIuq_M/edit#  "Notes on Notes")
+- [Discussion Lead 2: Data Janitors](https://xd.adobe.com/view/f46b4963-86e3-431b-a40d-d00773afc64b-a138/?fullscreen "Data Janitors Overview and Debate")
+
+https://xd.adobe.com/view/f46b4963-86e3-431b-a40d-d00773afc64b-a138/?fullscreen
+
 ***
 
 |Class	|Topic	|Assignment	|
