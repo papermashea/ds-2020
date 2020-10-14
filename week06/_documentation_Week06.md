@@ -2,7 +2,7 @@
 
 ## Assignment Notes 
 
-I was getting some validation errors from week05 and while I thought I had figured out primaryKeys more accurately, I still had some work to do with them. To finalize my async work, I used these resources:
+I was getting some validation errors from week05 and while I thought I had figured out primaryKeys more accurately, I still had some work to do with them. I also began the process of breaking out my separate scripts to test. To finalize my async work, I used these resources:
 - https://caolan.github.io/async/v3/
 - https://dzone.com/articles/how-to-interact-with-a-database-using-the-async-mo
 
