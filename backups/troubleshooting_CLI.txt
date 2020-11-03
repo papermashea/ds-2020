@@ -1,0 +1,79 @@
+Last login: Mon Nov  2 21:54:16 on ttys003
+production2:~ designer$ npm uninstall -g particle-cli
+up to date in 0.036s
+production2:~ designer$ rm -rf ~/.particle
+production2:~ designer$ rm ~/bin/particle
+production2:~ designer$ bash <( curl -sL https://particle.io/install-cli )
+Installing the Particle CLI to /Users/designer/bin/particle
+particle: Adding dependencies... done
+particle: Installing plugins... done
+Welcome to the Particle Command Line Interface!
+Version 2.8.1
+https://github.com/particle-iot/particle-cli
+
+Usage: particle <command>
+Help:  particle help <command>
+
+Commands:
+  binary      Inspect binaries
+  call        Call a particular function on a device
+  cloud       Access Particle cloud functionality
+  compile     Compile a source file, or directory using the cloud compiler
+  config      Configure and switch between multiple accounts
+  device      Manipulate a device
+  doctor      Put your device back into a healthy state
+  flash       Send firmware to your device
+  function    Call functions on your device
+  get         Retrieve a value from your device
+  identify    Ask for and display device ID via serial
+  keys        Manage your device's key pair and server public key
+  library     Manage firmware libraries
+  list        Display a list of your devices, as well as their variables and
+              functions
+  login       Login to the cloud and store an access token locally
+  logout      Log out of your session and clear your saved access token
+  mesh        Manage mesh networks
+  monitor     Connect and display messages from a device
+  nyan        Make your device shout rainbows
+  preprocess  Preprocess a Wiring file (ino) into a C++ file (cpp)
+  product     Access Particle Product functionality [BETA]
+  project     Manage application projects
+  publish     Publish an event to the cloud
+  serial      Simple serial interface to your devices
+  setup       Do the initial setup & claiming of your device
+  subscribe   Listen to device event stream
+  token       Manage access tokens (require username/password)
+  udp         Talk UDP to repair devices, run patches, check Wi-Fi, and more!
+  update      Update the system firmware of a device via USB
+  update-cli  Update the Particle CLI to the latest version
+  usb         Control USB devices
+  variable    Retrieve and monitor variables on your device
+  webhook     Manage webhooks that react to device event streams
+  whoami      prints signed-in username
+
+Global Options:
+  -v, --verbose  Increases how much logging to display                   [count]
+  -q, --quiet    Decreases how much logging to display                   [count]
+
+Options:
+  --version  Show the version of particle-cli installed.               [boolean]
+
+Examples:
+  particle setup                            Set up your Particle account and
+                                            your device
+  particle list                             Show all your devices and their
+                                            functions and variables
+  particle flash my_device tinker           Remotely update your device to run
+                                            the default Tinker app
+  particle call my_device_name              Call a function on your device
+  digitalwrite D7=HIGH                      running Tinker to toggle the onboard
+                                            LED
+
+For more information, visit our documentation at https://docs.particle.io
+
+Get started by running "particle login"
+If that doesn't work, open a new terminal and make sure /Users/designer/bin is in your shell path.
+If you previously installed the CLI with npm, run "npm uninstall -g particle-cli"
+production2:~ designer$ particle --version
+2.8.1
+production2:~ designer$ 
