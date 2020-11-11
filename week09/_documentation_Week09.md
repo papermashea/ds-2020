@@ -76,14 +76,18 @@ More on installing dfu: https://support.particle.io/hc/en-us/articles/3600392513
 ## Updates
 
 ## Working device
-Lorem ipsum
-
-## Data pulls
-Lorem ipsum
+Working device is currently recording temperature, humidity, dew point and heat index. The temperature variable is accessible in Farhenheit. 
 
 ## Sketches 
-I'm planning on using the temperature sensor to monitor the environment for my pet snake, Plissken's tank. You can find the sketches for the UI as they exist pre-data pulling here: https://xd.adobe.com/view/3169d145-ee3a-450f-b004-839efbcf5e21-643a/
+Sketches from last week have been updated here: https://xd.adobe.com/view/cdf8d3dd-c801-4024-b4ae-61fb620d9b40-98ab/
+
+## Future sensor data (from Adafruit Sensor pack 900):
+- Pressure: Round Force-Sensitive Resistor (FSR) - Interlink 402 https://www.adafruit.com/product/166
+- Light: Photo cell (CdS photoresistor) https://www.adafruit.com/product/161
+- Orientation: Tilt ball switch https://www.adafruit.com/product/173
+
 
 ## Questions
-- What are the data ranges being pulled?
-- How can we convert data being pulled from the device in ino?
+- What else can I pull in to examine the environment?
+- Is Dew point/Humidity/Heat index being converted to Celcius?
+- How often should I run these data pulls?

@@ -112,7 +112,7 @@ I am now troubleshooting in safemode, trying to identify the infinite loop or pa
 The device is working and I am currently troubleshooting the starter code in safe mode to prevent future crashes.
 
 ## Sketches
-I'm planning on using the temperature sensor to monitor the environment for my pet snake, Plissken's tank. You can find the sketches for the UI as they exist pre-data pulling here: https://xd.adobe.com/view/3169d145-ee3a-450f-b004-839efbcf5e21-643a/
+I'm planning on using the temperature sensor to monitor the environment for my pet snake, Plissken's tank. You can find the sketches for the UI as they exist pre-data pulling here: https://xd.adobe.com/view/e04e12ef-1724-40b0-ad39-fcca0c7b9ad5-b51d/
 
 ## Questions
 - What are the main differences between _#include <filename>_ and _#include "filename"_?
