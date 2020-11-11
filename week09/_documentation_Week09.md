@@ -31,11 +31,17 @@ TimeoutError [VError]
 ```
 
 ### Reinstalling CLI
-Lorem ipsum Lorem ipsum Lorem ipsum
-- https://docs.particle.io/tutorials/developer-tools/cli/
+Upon rebooting my particle proton device, I found I was no longer able to access the device via usb with command line interface tools. I ended up trying a lot of work arounds including uninstalling and reinstalling particle cli a few times with npm:
+
+    npm uninstall -g particle-cli
+    bash <( curl -sL https://particle.io/install-cli )
+
 
 ### .bash, brew and dfu
-installing dfu: https://support.particle.io/hc/en-us/articles/360039251394/
+Eventually I tried several different usb cables, updating cli, updating dfu-util, updating my local bash profile and settings, and using a different computer to update the device firmware and was able to interact with the device again.
+
+More on installing dfu: https://support.particle.io/hc/en-us/articles/360039251394/
+
 ![.bash profile updates](images/bash_profile.png ".bash profile")
 
 ```
