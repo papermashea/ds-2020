@@ -24,9 +24,9 @@ https://xd.adobe.com/view/f46b4963-86e3-431b-a40d-d00773afc64b-a138/?fullscreen
 |Week06	|Queries	|[week06 documentation](https://github.com/papermashea/ds-2020/blob/master/week06/_documentation_Week06.md)   	|
 |Week07	|Cleanup	|[week07 documentation](https://github.com/papermashea/ds-2020/blob/master/week07/_documentation_Week07.md)	|
 |Week08	|IoT	|[week08 documentation](https://github.com/papermashea/ds-2020/blob/master/week08/_documentation_Week08.md)	|
-|   	|   	|   	|
-|   	|   	|   	|
-|   	|   	|   	|
-|   	|   	|   	|
-|   	|   	|   	|
-|   	|   	|   	|
+|Week09 |More IoT |[week09 documentation](https://github.com/papermashea/ds-2020/blob/master/week09/_documentation_Week09.md) |
+|Week10 |Serverless Computing |week10 documentation](https://github.com/papermashea/ds-2020/blob/master/week10/_documentation_Week10.md) |
+|Week11 |   	|   	|
+|Week12 |   	|   	|
+|Week13 |   	|   	|
+|Week14 |   	|   	|
