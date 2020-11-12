@@ -5,7 +5,7 @@ This paper was executed as an exploratory study in the theory of data understand
 
 The study was designed to develop data visceralization as a  technique to enable a deeper understanding of scale and physicality. Narrative data models defined in 2010 helped frame the kinds of data that could be explored with data visceralization and the idea of **“Data-driven experiences which evoke visceral feelings within a user to facilitate intuitive understanding of physical measurements and qualities”**.
 
-![Narrative Data Model](images/NarrativeData.png "Narrative Data")
+&lt; img src="images/Prototypes.png" alt="VR Prototypes" title="VR Prototype Models" width="100px" /gt;
 
 The aims of this research included assessing and expediting data physicalization and concrete scales (2013) that have been developed to “aid in comprehending unfamiliar units and extreme magnitudes by comparison to more familiar objects” as well as the methods of how to explore data in immersive spaces. In examining the ways in which AR and VR didn’t initially take full advantage of the application of scale as applications kept 2D imagery in 3D environments, Researchers looked at other examples of visceral storytelling to inspire the prototype construction, such as WSJ’s [NASDAQ Rollercoaster (2015)](https://graphics.wsj.com/3d-nasdaq/ "NASDAQ Rollercoaster").
 
