@@ -2,7 +2,7 @@
 
 ## Data Structures Fall 2020| S. Molloy reviewing [IEEE talk froom Benjamin Lee and paper from Benjamin Lee, David Brown, Bongshin Lee, Christophe Hurter, Steven Drucker, Tim Dwyer](https://www.youtube.com/watch?v=C3q5XhdanXk "Data Visceralization 2020 IEEE Talk")
 
-###*[see paper]*(https://virtual.ieeevis.org/paper_f-info-1084.html "Data Visceralization Paper")
+### *[see paper]*(https://virtual.ieeevis.org/paper_f-info-1084.html "Data Visceralization Paper")
 
 
 
