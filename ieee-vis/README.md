@@ -5,7 +5,8 @@ This paper was executed as an exploratory study in the theory of data understand
 
 The study was designed to develop data visceralization as a  technique to enable a deeper understanding of scale and physicality. Narrative data models defined in 2010 helped frame the kinds of data that could be explored with data visceralization and the idea of **“Data-driven experiences which evoke visceral feelings within a user to facilitate intuitive understanding of physical measurements and qualities”**.
 
-![Narrative Data Model](images/NarrativeData.png "Narrative Data")
+
+<img src="images/NarrativeData.png" alt="Narrative Data" title="Narrative Data Model" width="600px"/>
 
 The aims of this research included assessing and expediting data physicalization and concrete scales (2013) that have been developed to “aid in comprehending unfamiliar units and extreme magnitudes by comparison to more familiar objects” as well as the methods of how to explore data in immersive spaces. In examining the ways in which AR and VR didn’t initially take full advantage of the application of scale as applications kept 2D imagery in 3D environments, Researchers looked at other examples of visceral storytelling to inspire the prototype construction, such as WSJ’s [NASDAQ Rollercoaster (2015)](https://graphics.wsj.com/3d-nasdaq/ "NASDAQ Rollercoaster").
 
@@ -20,13 +21,14 @@ The study consisted of quantitative and qualitative feedback on a series of **6 
 - Abstract Measures: US Debt Visualized
 - Extreme Scale: Solar System
 
-&lt; img src="images/Prototypes.png" alt="VR Prototypes" title="VR Prototype Models" width="100px" /gt;
+<img src="images/Prototypes.png" alt="VR Prototypes" title="VR Prototype Models" width="600px"/>
 
 The study found that the prototypes testing understanding of Speed (E1), Scale (E3), and Abstract Quantities (E5) were the most effective in facilitating the comprehension of the data through emotional responses triggered by the viscerality of the data narrative. These tests, in addition to the analysis of the other data types, provided valuable insight into design approaches.
 
-![VR Prototypes: Showing Speed and Distance](images/Race.png "Race VR Prototype")
-![VR Prototypes: Showing Scale](images/Scale.png "Scale VR Prototypes")
-![VR Prototypes: Showing Abstractiong](images/Abstract.png "Abstract VR Prototypes")
+
+<img src="images/Race.png" alt="" title="VR Prototypes: Showing Speed and Distance" width="300px"/>
+<img src="images/Scale.png" alt="Scale VR Prototypes" title="VR Prototypes: Showing Scale" width="300px"/>
+<img src="images/Abstract.png" alt="Abstract VR Prototypes" title="VR Prototype Models" width="300px"/>
 
 ***
 
@@ -36,6 +38,6 @@ The main insights from this paper were design approaches on perspective, virtual
 
 Lastly, the **transformation of data and it’s representation can aid in better understanding of data types** such as scale extreme scale. 1:1 scale is the most initially effective, but not always possible, thus requiring the need for relative scales in specific contexts. 
 
-![The Data Discerality Model](images/Model.png "Data Discerality Model")
+<img src="images/Model.png" alt="Data Discerality Model" title="The Data Discerality Model" width="300px"/>
 
 In conclusion, this study finds that data visualizations have a great application to reality based on users’ mental, emotional and physical application to their own lives, and thus work well as a complement to data visualizations. While data visualizations can provide analysis and interpretation, data visceralization can provide a connection to real-world understanding and thus help build mental models for applying that comprehension of data narrative. Future research is aimed at expanding media types studied in data visceralization including augmented reality, haptic stimulation and olfactory devices.
