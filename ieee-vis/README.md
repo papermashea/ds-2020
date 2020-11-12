@@ -36,6 +36,6 @@ The main insights from this paper were design approaches on perspective, virtual
 
 Lastly, the **transformation of data and it’s representation can aid in better understanding of data types** such as scale extreme scale. 1:1 scale is the most initially effective, but not always possible, thus requiring the need for relative scales in specific contexts. 
 
-<img src="images/Model.png" alt="Data Discerality Model" title="The Data Discerality Model" width="300px"/>
+<img src="images/Model.png" alt="Data Discerality Model" title="The Data Discerality Model" width="600px"/>
 
 In conclusion, this study finds that data visualizations have a great application to reality based on users’ mental, emotional and physical application to their own lives, and thus work well as a complement to data visualizations. While data visualizations can provide analysis and interpretation, data visceralization can provide a connection to real-world understanding and thus help build mental models for applying that comprehension of data narrative. Future research is aimed at expanding media types studied in data visceralization including augmented reality, haptic stimulation and olfactory devices.
