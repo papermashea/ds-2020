@@ -20,8 +20,7 @@ The study consisted of quantitative and qualitative feedback on a series of **6 
 - Abstract Measures: US Debt Visualized
 - Extreme Scale: Solar System
 
-<img src="images/Prototypes.png" alt="VR Prototypes"
-	title="VR Prototype Models" width="100px"/>
+&lt; img src="images/Prototypes.png" alt="VR Prototypes" title="VR Prototype Models" width="100px" /gt;
 
 The study found that the prototypes testing understanding of Speed (E1), Scale (E3), and Abstract Quantities (E5) were the most effective in facilitating the comprehension of the data through emotional responses triggered by the viscerality of the data narrative. These tests, in addition to the analysis of the other data types, provided valuable insight into design approaches.
 
