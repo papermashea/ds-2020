@@ -25,9 +25,8 @@ The study consisted of quantitative and qualitative feedback on a series of **6 
 The study found that the prototypes testing understanding of Speed (E1), Scale (E3), and Abstract Quantities (E5) were the most effective in facilitating the comprehension of the data through emotional responses triggered by the viscerality of the data narrative. These tests, in addition to the analysis of the other data types, provided valuable insight into design approaches.
 
 
-<img src="images/Race.png" alt="" title="VR Prototypes: Showing Speed and Distance" width="300px"/>
-<img src="images/Scale.png" alt="Scale VR Prototypes" title="VR Prototypes: Showing Scale" width="300px"/>
-<img src="images/Abstract.png" alt="Abstract VR Prototypes" title="VR Prototype Models" width="300px"/>
+| <img src="images/Race.png" alt="" title="VR Prototypes: Showing Speed and Distance" width="300px"/> | <img src="images/Scale.png" alt="Scale VR Prototypes" title="VR Prototypes: Showing Scale" width="300px"/> | 
+<img src="images/Abstract.png" alt="Abstract VR Prototypes" title="VR Prototype Models" width="300px"/> |
 
 ***
 
