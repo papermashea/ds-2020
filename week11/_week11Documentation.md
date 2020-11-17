@@ -77,7 +77,7 @@ My IoT interface will be displaying the active environmental measurements for te
 ### Designs
 This interface will be interactive in that different visualizations will be able to be shown at different times, and there will be menu items for different pages of information.
 
-| <img src="images/IOT_Collected_temp.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px"/> | <img src="images/IOT_Collected_light.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px"/> | <img src="images/IOT_Menu.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px"/> | <img src="images/IOT_Care.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px"/> |
+| <img src="images/IOT_Collected_temp.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px" valign="top"/> | <img src="images/IOT_Menu.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px" valign="top"/> | <img src="images/IOT_Visuals.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px" valign="top"/> | <img src="images/IOT_Care.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px" valign="top"/> |
 
 
 
