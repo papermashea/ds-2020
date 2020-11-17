@@ -1,5 +1,7 @@
 ## Data Structures Assignment Documentation
 
+**Please note that halfway through the semester I updated my method of using a "master" branch for all my work to using a "main" branch for all my work. Documentation below has been updated**
+
 ### Notes & Resources
 Resources and thoughts for this class are kept in an ongoing series of weekly notes
 
@@ -16,17 +18,17 @@ https://xd.adobe.com/view/f46b4963-86e3-431b-a40d-d00773afc64b-a138/?fullscreen
 
 |Class	|Topic	|Assignment	|
 |---	|---	|---	|
-|Week01	|Setup	|[week01 documentation](https://github.com/papermashea/ds-2020/blob/master/week01/_documentation_Week01.md); [resubmit01](https://github.com/papermashea/ds-2020/blob/master/week01/week01b.js)	|
-|Week02	|Scraping	|[week02 documentation](https://github.com/papermashea/ds-2020/blob/master/week02/week02-Documentation.md)   	|
-|Week03	|API	|[week03 documentation](https://github.com/papermashea/ds-2020/blob/master/week03/_documentation_Week03.md); [resubmit01](https://github.com/papermashea/ds-2020/blob/master/week03/week03b.js)   	|
-|Week04	|SQL	|[week04.md](https://github.com/papermashea/ds-2020/blob/master/week04/_documentation_Week04.md)   	|
-|Week05	|DynamoDB	|[week05 documentation](https://github.com/papermashea/ds-2020/blob/master/week05/_documentation_Week05.md); [resubmit01](https://github.com/papermashea/ds-2020/blob/master/week05/week05b.js)   	|
-|Week06	|Queries	|[week06 documentation](https://github.com/papermashea/ds-2020/blob/master/week06/_documentation_Week06.md)   	|
-|Week07	|Cleanup	|[week07 documentation](https://github.com/papermashea/ds-2020/blob/master/week07/_documentation_Week07.md)	|
-|Week08	|IoT	|[week08 documentation](https://github.com/papermashea/ds-2020/blob/master/week08/_documentation_Week08.md)	|
-|Week09 |More IoT |[week09 documentation](https://github.com/papermashea/ds-2020/blob/master/week09/_documentation_Week09.md) |
-|Week10 |Serverless Computing |week10 documentation](https://github.com/papermashea/ds-2020/blob/master/week10/_documentation_Week10.md) |
-|Week11 |   	|   	|
+|Week01	|Setup	|[week01 documentation](https://github.com/papermashea/ds-2020/blob/main/week01/_documentation_Week01.md); [resubmit01](https://github.com/papermashea/ds-2020/blob/main/week01/week01b.js)	|
+|Week02	|Scraping	|[week02 documentation](https://github.com/papermashea/ds-2020/blob/main/week02/week02-Documentation.md)   	|
+|Week03	|API	|[week03 documentation](https://github.com/papermashea/ds-2020/blob/main/week03/_documentation_Week03.md); [resubmit01](https://github.com/papermashea/ds-2020/blob/main/week03/week03b.js)   	|
+|Week04	|SQL	|[week04.md](https://github.com/papermashea/ds-2020/blob/main/week04/_documentation_Week04.md)   	|
+|Week05	|DynamoDB	|[week05 documentation](https://github.com/papermashea/ds-2020/blob/main/week05/_documentation_Week05.md); [resubmit01](https://github.com/papermashea/ds-2020/blob/main/week05/week05b.js)   	|
+|Week06	|Queries	|[week06 documentation](https://github.com/papermashea/ds-2020/blob/main/week06/_documentation_Week06.md)   	|
+|Week07	|Cleanup	|[week07 documentation](https://github.com/papermashea/ds-2020/blob/main/week07/_documentation_Week07.md)	|
+|Week08	|IoT	|[week08 documentation](https://github.com/papermashea/ds-2020/blob/main/week08/_documentation_Week08.md)	|
+|Week09 |More IoT |[week09 documentation](https://github.com/papermashea/ds-2020/blob/main/week09/_documentation_Week09.md) |
+|Week10 |Serverless Computing |week10 documentation](https://github.com/papermashea/ds-2020/blob/main/week10/_documentation_Week10.md) |
+|Week11 |Data Design   	|week11 documentation](https://github.com/papermashea/ds-2020/blob/main/week10/_documentation_Week11.md)   	|
 |Week12 |   	|   	|
 |Week13 |   	|   	|
 |Week14 |   	|   	|
