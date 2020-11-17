@@ -35,6 +35,8 @@ The remaining data organizing tasks include querying by day correctly, building 
 **Ongoing designs will be kept here: https://xd.adobe.com/view/da09c604-b579-44a5-88f6-ace1e85d01e2-8f5a/**
 
 
+
+
 ***
 ## Assignment 2: Process Blog
 
@@ -64,6 +66,8 @@ To build out this data, I will need to import my existing data into my form data
 **Ongoing designs will be kept here: https://xd.adobe.com/view/c2543b4c-be77-452d-a904-3e9875ce7b5e-9707/**
 
 
+
+
 ***
 ## Assignment 3: Internet of things
 
@@ -73,7 +77,7 @@ My IoT interface will be displaying the active environmental measurements for te
 ### Designs
 This interface will be interactive in that different visualizations will be able to be shown at different times, and there will be menu items for different pages of information.
 
-| <img src="images/IOT_Collected_temp.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/> | <img src="images/IOT_Collected_light.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/> | <img src="images/IOT_Menu.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/> | <img src="images/IOT_Care.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/> |
+| <img src="images/IOT_Collected_temp.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px"/> | <img src="images/IOT_Collected_light.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px"/> | <img src="images/IOT_Menu.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px"/> | <img src="images/IOT_Care.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="200px"/> |
 
 
 
