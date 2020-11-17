@@ -13,7 +13,7 @@ Users will likely be looking for a meeting that fits their schedule and interest
 These designs are meant to elevate inclusivity and access to AA members of all interests. Users can drill filter with a variety of methods but are only shown the relevant information to attending the meetings in the information bubble. I've also accounted for some users who are looking for specific interest groups, types of meetings, or access levels.
 
 <img src="images/AA_Map_v1b.png" alt="AA Meetings" title="All-Access AA Meetings" width="600px"/>
-<img src="images/AA_Map_v1b-1.png" alt="AA Meetings" title="All-Access AA Meetings" width="600px"/>
+<img src="images/AA_Map_v1b-1.png" alt="AA Meetings" title="All-Access AA Meetings" width="800px"/>
 
 
 **Decisions & Questions:**
@@ -47,7 +47,7 @@ The user could be any caregiver looking to spot care caps or creature needs. Fla
 ### Designs
 My designs for this daily data prioritize pattern analysis and ranges for keeping Plissken healthy. I'm keeping track of the data over the course of a month and looking at gaps in his care based on ranges determined by pet experts. I've made a form to track this data over time, and will be incorporating the form entry into my IoT designs as well: https://forms.gle/VPTqtNTsYF3Mh5nc9
 
-<img src="images/PB_Analysis_vis.png" alt="PB Snake Care" title="Process Blog Analysis Visualization" width="600px"/>
+<img src="images/PB_Analysis_Vis_v1.png" alt="PB Snake Care" title="Process Blog Analysis Visualization" width="600px"/>
 
 
 **Decisions & Questions:**
@@ -73,10 +73,7 @@ My IoT interface will be displaying the active environmental measurements for te
 ### Designs
 This interface will be interactive in that different visualizations will be able to be shown at different times, and there will be menu items for different pages of information.
 
-<img src="images/IOT_Collected_temp.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/>
-<img src="images/IOT_Collected_light.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/>
-<img src="images/IOT_Menu.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/>
-<img src="images/IOT_Care.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/>
+| <img src="images/IOT_Collected_temp.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/> | <img src="images/IOT_Collected_light.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/> | <img src="images/IOT_Menu.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/> | <img src="images/IOT_Care.png" alt="IoT Snake Data" title="IoT Snekscape Data" width="300px"/> |
 
 
 
