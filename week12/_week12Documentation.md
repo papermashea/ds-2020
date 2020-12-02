@@ -11,6 +11,16 @@
 	nodemon app.js
 - browserify: https://www.npmjs.com/package/browserify
 - package.json vs package lock https://dltlabs.medium.com/package-json-vs-package-lock-json-c8d5deba12cb
+- content security policy https://www.npmjs.com/package/content-security-policy
+	https://content-security-policy.com/examples/express-js/
+	https://developers.google.com/web/fundamentals/security/csp	
+- csp middleware for express: https://www.npmjs.com/package/express-csp-header
+	npm i express-csp-header
+	https://stackoverflow.com/questions/56191364/how-to-configure-csp-headers-with-express-node-js
+	https://stackoverflow.com/questions/56386307/loading-of-a-resource-blocked-by-content-security-policy
+- helmet for csp: https://stackoverflow.com/questions/21048252/nodejs-where-exactly-can-i-put-the-content-security-policy
+	npm install helmet --save
+	https://helmetjs.github.io/
 
 Learn Handlebars:
 - https://www.sitepoint.com/a-beginners-guide-to-handlebars/
@@ -43,6 +53,12 @@ https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#circle
 ## Assignment 2: Process Blog
 
 ### Setup
+- https://www.npmjs.com/package/simple-express-handlebars-boilerplate 
+	npm i simple-express-handlebars-boilerplate --save
+	cp to final2
+- npm install jquery
+- npm install aws-sdk
+- example handlebars precompiler
 
 ### Cleanup
 ![Process Blog Analysis Data](images/PB_dataTypes.png "PB Snake Care")
@@ -58,6 +74,10 @@ https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#circle
 ## Assignment 3: Internet of things
 
 ### Setup
+- npm i
+- npm ci
+- npm i simple-express-handlebars-boilerplate --save
+- npm i d3 --save
 
 ### Cleanup
 
