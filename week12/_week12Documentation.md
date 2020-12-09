@@ -21,6 +21,8 @@
 - helmet for csp: https://stackoverflow.com/questions/21048252/nodejs-where-exactly-can-i-put-the-content-security-policy
 	npm install helmet --save
 	https://helmetjs.github.io/
+- Running on AWS: https://docs.aws.amazon.com/cloud9/latest/user-guide/sample-nodejs.html
+
 
 Learn Handlebars:
 - https://www.sitepoint.com/a-beginners-guide-to-handlebars/

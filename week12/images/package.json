@@ -1,0 +1,16 @@
+// {
+//   "name": "aa-map",
+//   "version": "0.0.0",
+//   "private": true,
+//   "scripts": {
+//     "build": "browserify map.js -o public/js/map.js & cp node_modules/leaflet/dist/leaflet.css public/styles/leaflet.css"
+//   },
+
+//   "dependencies": {
+//     "cookie-parser": "~1.4.3",
+//     "debug": "~2.6.9",
+//     "express": "~4.16.0",
+//     "leaflet": "^1.4.0",
+//     "morgan": "~1.9.0"
+//   }
+// }
