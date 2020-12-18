@@ -26,7 +26,7 @@ Resources and thoughts for this class are kept in an ongoing series of weekly no
 ## Final Project Demos
 - [Full app demo](https://github.com/papermashea/ds-2020/blob/main/finalProject/SheaMolloy_DS2020.mp4 "Full app demo")
 - [AA map walk through](https://github.com/papermashea/ds-2020/blob/main/finalProject/1.aaMap_walkthrough.mov "AA map walk through")
-- [Sensor data walk through]("https://github.com/papermashea/ds-2020/blob/main/finalProject/2.sensorData_walkthrough.mov" "Sensor data walk through")
+- [Sensor data walk through](https://github.com/papermashea/ds-2020/blob/main/finalProject/2.sensorData_walkthrough.mov "Sensor data walk through")
 - [Process blog walk through](https://github.com/papermashea/ds-2020/blob/main/finalProject/3.processBlog_walkthrough.mov "Process blog walk through")  
 
 **Final app code available [here](https://github.com/papermashea/ds-2020/tree/main/finalProject "Final app code")**  
