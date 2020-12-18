@@ -1,0 +1,19 @@
+entry,date,fed,watered,cleaned,substrate,shed,waste,light,location,time,notes
+15,2020-11-30,No,Yes,No,Aspen,No,0,5,Living room shelf,0,Low light
+16,2020-12-04,No,Yes,No,Aspen,No,0,5,Living room shelf,0,
+17,2020-12-10,No,Yes,No,Aspen,No,0,0,Living room shelf,0,
+0,2020-07-17,Yes,Yes,Yes,Cypress,No,2,10,Parlor,20,
+1,2020-08-08,Yes,Yes,No,Cypress,Yes,10,10,Parlor,10,Fed in bucket
+2,2020-09-02,No,Yes,No,Aspen,No,0,10,Parlor,60,Olivia handled
+3,2020-09-10,Yes,Yes,No,Aspen,Yes,5,10,Parlor,10,Fed in bucket
+4,2020-09-20,No,Yes,No,Aspen,Yes,0,10,Bedroom,20,Bailey handled
+5,2020-10-01,Yes,Yes,Yes,Fresh Aspen,No,0,5,Bedroom,10,RhianNon handled
+6,2020-10-30,Yes,Yes,No,Aspen,No,10,5,Bedroom,20,Did Not like direct morning sun
+7,2020-10-31,No,Yes,No,Aspen,No,0,5,Living room,10,Angela handled
+8,2020-10-31,No,Yes,No,Aspen,No,0,5,Living room,10,Angela handled
+9,2020-11-02,No,Yes,Yes,Fresh Aspen,No,0,5,Living room,10,Moved to near heating pole
+10,2020-11-06,No,Yes,No,Aspen,No,0,5,Living room,20,Out a lot
+11,2020-11-08,No,Yes,No,Aspen,Yes,5,5,Living room,10,Moved away from heating pole
+12,2020-11-12,No,Yes,No,Aspen,No,0,5,Living room,20,In skull!
+13,2020-11-14,No,Yes,Yes,Fresh Aspen,No,2,5,Living room,10,Branch added
+14,2020-11-16,No,Yes,No,Aspen,No,0,5,Living room,0,

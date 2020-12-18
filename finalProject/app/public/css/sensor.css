@@ -1,0 +1,59 @@
+/* PAGE STYLES */
+
+body {
+  background-color: white;
+}
+
+.info {
+    width: 100%;
+}
+
+.nav {
+  width:100%;
+  padding: 0 20%;
+  align-content: center;
+}
+
+.tabs {
+  width:30%;
+  height: 50px;
+  float: left;
+  margin: 0 20px 50px 0;
+  text-align: center;
+  background-color: lightgreen;
+  box-shadow: 2px 2px 4px #000000;
+  padding-top: 10px;
+}
+
+.tabs#current {
+  background-color: yellowgreen;
+}
+
+/* TYPE STYLES */
+
+h2 {
+  width:90%;
+  font-style: italic;
+  float: left;
+  text-align: left;
+}
+
+
+.plotly div {
+    font-family: roboto, sans-serif;
+}
+
+p.info {
+  width: 90%;
+  line-height: 1.5;
+  float: left;
+  text-align: left;
+}
+
+.tabs a {
+  color: white;
+  text-decoration: none;
+  line-height: 2;
+  font-family: roboto, sans-serif;
+  font-weight: 200;
+}

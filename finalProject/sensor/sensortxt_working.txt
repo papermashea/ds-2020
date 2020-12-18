@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+</style>
+<body>
+<a href="/temperature"> Average tank temp</a>
+<p>Over the course of a day</p>
+  <div id="avgTemp"></div>
+  
+<a href="/high"> Highest temperature points</a>
+<p>tktktktk</p>
+  <div id="tempmap"></div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'>
+<script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+
+var data = {{{sensordata}}};
+
+xAxis = [];
+yAxis = [];
+zAxis = [];
+
+
+for (var i=0; i < data.length; i++) {
+  xAxis.push(data[i].sensorhour);
+  yAxis.push(data[i].num_obs);
+  zAxis.push(data[i].num_obs);
+};
+
+var layout = {
+  title: 'Snekscape Temperature Sensor',
+  annotations: [],
+  xaxis: {
+    ticks: '',
+    side: 'top'
+  },
+  yaxis: {
+    ticks: '',
+    ticksuffix: ' ',
+    width: 700,
+    height: 700,
+    autosize: false
+  }
+};
+ 
+  var map = [
+  {
+    z: zAxis,
+    x: xAxis,
+    y: yAxis,
+    type: 'heatmap',
+    hoverongaps: false
+  }
+];
+
+console.log(zAxis);
+
+Plotly.newPlot('tempmap', map);
+
+</script>
+</body>

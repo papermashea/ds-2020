@@ -1,0 +1,366 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Snekscape: Pet Care Tracker</title>
+  <meta name="description" content="Tracking Pet Care">
+  <meta name="author" content="Shea">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+	<link rel="stylesheet" href="css/pb.css?v=1.0">
+
+</head>
+
+<body>
+<h3 class="care">Snekscape Statuses</h3>
+<p class="care">Track your care:</p>
+
+<div class="input-group date">
+<input type="text" class="form-control datepicker" id="f5" name="f5" value=""    
+  data-datepicker-format="dd-M-yyyy" />
+<span class="input-group-addon right"><i class="glyphicon glyphicon-th"></i> </span></div>
+  
+</div>
+
+
+
+
+<div class="form-group f4  col-2" data-fid="f4">
+  <label class="control-label" for="f4">Fed?</label>
+
+<div class="radio">
+  	<input  id="f4_1" name="f4"  type="radio" value="true"  >
+  	<label  for="f4_1">
+  		Yes
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f4_2" name="f4"  type="radio" value="false"  >
+  	<label  for="f4_2">
+  		No
+  	</label>
+  </div>
+
+  
+</div>
+
+
+
+
+<div class="form-group f6  col-2" data-fid="f6">
+  <label class="control-label" for="f6">Watered?</label>
+
+<div class="radio">
+  	<input  id="f6_1" name="f6"  type="radio" value="true"  >
+  	<label  for="f6_1">
+  		Yes
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f6_2" name="f6"  type="radio" value="false"  >
+  	<label  for="f6_2">
+  		No
+  	</label>
+  </div>
+
+  
+</div>
+
+
+
+
+<div class="form-group f7  col-2" data-fid="f7">
+  <label class="control-label" for="f7">Cleaned?</label>
+
+<div class="radio">
+  	<input  id="f7_1" name="f7"  type="radio" value="true"  >
+  	<label  for="f7_1">
+  		Yes
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f7_2" name="f7"  type="radio" value="false"  >
+  	<label  for="f7_2">
+  		No
+  	</label>
+  </div>
+
+  
+</div>
+
+
+
+
+<div class="form-group f8  col-2" data-fid="f8">
+  <label class="control-label" for="f8">Shed?</label>
+
+<div class="radio">
+  	<input  id="f8_1" name="f8"  type="radio" value="true"  >
+  	<label  for="f8_1">
+  		Yes
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f8_2" name="f8"  type="radio" value="false"  >
+  	<label  for="f8_2">
+  		No
+  	</label>
+  </div>
+
+  
+</div>
+
+
+
+
+<div class="form-group f9  inline" data-fid="f9">
+  <label class="control-label" for="f9">Waste (mg)</label>
+
+<div class="radio">
+  	<input  id="f9_1" name="f9"  type="radio" value="5"  >
+  	<label  for="f9_1">
+  		5
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f9_2" name="f9"  type="radio" value="10"  >
+  	<label  for="f9_2">
+  		10
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f9_3" name="f9"  type="radio" value="20"  >
+  	<label  for="f9_3">
+  		20
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f9_4" name="f9"  type="radio" value="30"  >
+  	<label  for="f9_4">
+  		30
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f9_5" name="f9"  type="radio" value="40"  >
+  	<label  for="f9_5">
+  		40
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f9_6" name="f9"  type="radio" value="50"  >
+  	<label  for="f9_6">
+  		50
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f9_7" name="f9"  type="radio" value="60"  >
+  	<label  for="f9_7">
+  		60
+  	</label>
+  </div>
+
+  
+</div>
+
+
+
+
+<div class="form-group f10  inline" data-fid="f10">
+  <label class="control-label" for="f10">Light (watts)</label>
+
+<div class="radio">
+  	<input  id="f10_1" name="f10"  type="radio" value="5"  >
+  	<label  for="f10_1">
+  		5
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f10_2" name="f10"  type="radio" value="10"  >
+  	<label  for="f10_2">
+  		10
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f10_3" name="f10"  type="radio" value="20"  >
+  	<label  for="f10_3">
+  		20
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f10_4" name="f10"  type="radio" value="30"  >
+  	<label  for="f10_4">
+  		30
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f10_5" name="f10"  type="radio" value="40"  >
+  	<label  for="f10_5">
+  		40
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f10_6" name="f10"  type="radio" value="50"  >
+  	<label  for="f10_6">
+  		50
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f10_7" name="f10"  type="radio" value="60"  >
+  	<label  for="f10_7">
+  		60
+  	</label>
+  </div>
+
+  
+</div>
+
+
+
+
+<div class="form-group f1 " data-fid="f1">
+  <label class="control-label" for="f1">Substrate:</label>
+
+<div class="input-group"><span class="input-group-addon left"><i class="glyphicon glyphicon-user"></i> </span>
+<input type="text" class="form-control" id="f1" name="f1" value=""   placeholder="i.e. Aspen" 
+     />
+</div>
+
+  
+</div>
+
+
+
+
+<div class="form-group f11 " data-fid="f11">
+  <label class="control-label" for="f11">Location</label>
+
+<div class="input-group"><span class="input-group-addon left"><i class="glyphicon glyphicon-user"></i> </span>
+<input type="text" class="form-control" id="f11" name="f11" value=""   placeholder="i.e. Living room" 
+     />
+</div>
+
+  
+</div>
+
+
+
+
+<div class="form-group f12  inline" data-fid="f12">
+  <label class="control-label" for="f12">Time handled</label>
+
+<div class="radio">
+  	<input  id="f12_1" name="f12"  type="radio" value="5"  >
+  	<label  for="f12_1">
+  		5
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f12_2" name="f12"  type="radio" value="10"  >
+  	<label  for="f12_2">
+  		10
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f12_3" name="f12"  type="radio" value="20"  >
+  	<label  for="f12_3">
+  		20
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f12_4" name="f12"  type="radio" value="30"  >
+  	<label  for="f12_4">
+  		30
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f12_5" name="f12"  type="radio" value="40"  >
+  	<label  for="f12_5">
+  		40
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f12_6" name="f12"  type="radio" value="50"  >
+  	<label  for="f12_6">
+  		50
+  	</label>
+  </div>
+
+  <div class="radio">
+  	<input  id="f12_7" name="f12"  type="radio" value="60"  >
+  	<label  for="f12_7">
+  		60
+  	</label>
+  </div>
+
+  
+</div>
+
+
+
+
+<div class="form-group f13 " data-fid="f13">
+  <label class="control-label" for="f13">Notes</label>
+
+<div class="input-group"><span class="input-group-addon left"><i class="glyphicon glyphicon-user"></i> </span>
+<input type="text" class="form-control" id="f13" name="f13" value=""   placeholder="i.e. Living room" 
+     />
+</div>
+
+  
+</div>
+
+
+
+<div class="form-group submit f0 " data-fid="f0" style="position: relative;">
+  <label class="control-label sr-only" for="f0" style="display: block;">Submit Button</label>
+
+  <div class="progress" style="display: none; z-index: -1; position: absolute;">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" style="width:100%">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-lg" style="z-index: 1;">
+    <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+		Submit
+  </button>
+
+</div><div class="clearfix"></div>
+
+<div class="submit">
+  <p class="error bg-warning" style="display:none;">
+    Please check the required fields.  </p>
+</div>
+
+
+
+
+<script>
+var data = {{{formdata}}};
+</script>
+
+
+</body>
+</html>

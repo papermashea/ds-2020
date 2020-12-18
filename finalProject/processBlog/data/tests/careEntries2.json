@@ -1,0 +1,32 @@
+[
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "Fed,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No"
+ },
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "Watered,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes"
+ },
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "Cleaned,No,No,Yes,No,No,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No"
+ },
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "Substrate,Aspen,Aspen,Cypress,Cypress,Aspen,Aspen,Aspen,Fresh Aspen,Aspen,Aspen,Aspen,Fresh Aspen,Aspen,Aspen,Aspen,Fresh Aspen,Aspen"
+ },
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "Shed,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No"
+ },
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "Waste,0,0,2,10,0,5,0,0,10,0,0,0,0,5,0,2,0"
+ },
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "Light,5,5,10,10,10,10,10,5,5,5,5,5,5,5,5,5,5"
+ },
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "Location,Living room shelf,Living room shelf,Parlor,Parlor,Parlor,Parlor,Bedroom,Bedroom,Bedroom,Living room,Living room,Living room,Living room,Living room,Living room,Living room,Living room"
+ },
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "HandlingTime,0 min,0 min,20 min,10 min,60 min,10 min,20 min,10 min,20 min,10 min,10 min,10 min,20 min,10 min,20 min,10 min,0 min"
+ },
+ {
+  "Date,11/30/20,12/4/20,7/17/20,8/8/20,9/2/20,9/10/20,9/20/20,10/1/20,10/30/20,10/31/20,10/31/20,11/2/20,11/6/20,11/8/20,11/12/20,11/14/20,11/16/20": "Notes,Low light,,,Fed in bucket,Olivia handled,Fed in bucket,Bailey handled,Rhiannon handled,Did not like direct morning sun,Angela handled,Angela handled,Moved to near heating pole,Out a lot,Moved away from heating pole,In skull!,Branch added,"
+ }
+]

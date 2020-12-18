@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="css/styles.css?v=1.0">
+<link rel="stylesheet" href="css/sensor.css?v=1.0">
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+<div class ="sensor">
+<div id="range"></div>
+
+<div class ="nav">
+<div class="tabs" id="current">
+  <a href="/temperature" class="selection" id ="current"> 🌡 ️Average Temps. 🌡 </a>
+</div>
+
+<div class="tabs" id="last">
+  <a href="/high" class="selection" id ="last"> 📏 Safe Ranges 📏️ </a>
+</div>
+</div>
+
+<h2 class="sensor">Snekscape Sensor Data</h2>
+
+<p class ="info">This graph shows your highest and lowest temperatures over the course of a day in relation to the hottest and coldest (yet still safe) thresholds for your creature.</p>
+<p class ="info">Use this dashboard to track sensors associated with your Snekscape. You'll be abe to add light, humidity, and dewpoint sensors to monitor all kinds of pets and plants!</p>
+
+
+
+<script>
+
+var data = {{{highdata}}};
+
+// SNAKE RANGE
+// highEnd = 92;
+// dayEnd = 70;
+// lowEnd = 68;
+
+var lows = [];
+var highs = [];
+var hours = [];
+
+
+for (var i=0; i < 24; i++) {
+  hours.push(data[i].sensorhour);
+  lows.push(data[i].low_num);
+  highs.push(data[i].high_num);
+};
+
+// console.log(hours)
+// console.log(lows)
+// console.log(highs)
+
+var trace1 = { // highest safe threshold
+  x:hours,
+  y: Array(24).fill(92),
+  name: 'Hottest safe threshold',
+  mode: 'lines',
+  line: {
+    color: 'rgb(230,78,23)', //bright red
+    width: 5
+  }
+};
+
+// console.log(trace1)
+
+var trace2 = { // highest recorded temps
+  x: hours,
+  y: highs,
+  name: 'Highest recorded temperatures',
+  mode: 'lines',
+  line: {
+    color: 'rgb(255,189,105)', //orange
+    width: 5
+  }
+};
+
+var trace3 = { //lowest recorded temp
+ x: hours,
+  y: lows,
+  name: 'Lowest recorded temperatures',
+  mode: 'lines',
+  line: {
+    color: 'rgb(165,240,212)', // teal
+    width: 5
+  }
+};
+
+var trace4 = { // coldest safe threshold
+x: hours,
+  y: Array(24).fill(69),
+  name: 'Coldest safe threshold',
+  mode: 'lines',
+  line: {
+    color: 'rgb(18,85,163)', //dark blue
+    width: 5
+  }
+};
+
+
+// console.log(highEnd);
+
+var chart = [ trace1, trace2, trace3, trace4 ];
+
+var layout = {
+  title:'Aggregated Coldest and Hottest Values Over a 24-hour Day'
+};
+
+Plotly.newPlot('range', chart, layout);
+
+
+  </script>
+  </div>
+</body>
+</html>
+

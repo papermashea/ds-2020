@@ -4,7 +4,11 @@
 //npm i leaflet
 //npm i moment
 //npm i moment-timezone
-//npm i npm install aws-sdk
+//npm i aws-sdk
+//npm i pg
+//npm i fs 
+//npm i dotenv
+//npm i plotly.js@1.47.4
 
 var express = require('express'), 
     app = express();
@@ -13,14 +17,69 @@ var AWS = require('aws-sdk');
 const moment = require('moment-timezone');
 const handlebars = require('handlebars');
 var fs = require('fs');
+const dotenv = require('dotenv');
 
-const indexSource = fs.readFileSync("templates/sensor.txt").toString();
-var template = handlebars.compile(indexSource, { strict: true });
 
+// MAP TEMPLATES
+
+const aaSource = fs.readFileSync("templates/aa.txt").toString();
+var aatemplate = handlebars.compile(aaSource, { strict: true });
+
+const aaEve = fs.readFileSync("templates/eve.txt").toString();
+var evetemplate = handlebars.compile(aaEve, { strict: true });
+
+const aaMorn = fs.readFileSync("templates/morn.txt").toString();
+var morntemplate = handlebars.compile(aaMorn, { strict: true });
+
+const aaSun = fs.readFileSync("templates/sun.txt").toString();
+var suntemplate = handlebars.compile(aaSun, { strict: true });
+
+const aaMon = fs.readFileSync("templates/mon.txt").toString();
+var montemplate = handlebars.compile(aaMon, { strict: true });
+
+const aaTues = fs.readFileSync("templates/tues.txt").toString();
+var tuestemplate = handlebars.compile(aaTues, { strict: true });
+
+const aaWed = fs.readFileSync("templates/wed.txt").toString();
+var wedtemplate = handlebars.compile(aaWed, { strict: true });
+
+const aaThurs = fs.readFileSync("templates/thurs.txt").toString();
+var thurstemplate = handlebars.compile(aaThurs, { strict: true });
+
+const aaFri = fs.readFileSync("templates/fri.txt").toString();
+var fritemplate = handlebars.compile(aaFri, { strict: true });
+
+const aaSat = fs.readFileSync("templates/sat.txt").toString();
+var sattemplate = handlebars.compile(aaSat, { strict: true });
+
+
+
+// SENSOR TEMPLATES
+const sensordata = fs.readFileSync("templates/sensor.txt").toString();
+var sdtemplate = handlebars.compile(sensordata, { strict: true });
+
+const highdata = fs.readFileSync("templates/high.txt").toString();
+var hightemplate = handlebars.compile(highdata, { strict: true });
+
+
+
+// BLOG TEMPLATES
 const pbSource = fs.readFileSync("templates/pb.txt").toString();
 var pbtemplate = handlebars.compile(pbSource, { strict: true });
 
+const lastSource = fs.readFileSync("templates/pblast.txt").toString();
+var pblasttemplate = handlebars.compile(lastSource, { strict: true });
+
+const lastSource1 = fs.readFileSync("templates/pblast1.txt").toString();
+var pblast1template = handlebars.compile(lastSource1, { strict: true });
+
+const formData = fs.readFileSync("templates/form.txt").toString();
+var formtemp = handlebars.compile(formData, { strict: true });
+
+
+
 // AWS RDS credentials
+dotenv.config();
 var db_credentials = new Object();
 db_credentials.user = process.env.AWSRDS_UN;
 db_credentials.host = process.env.AWSRDS_HT; 
@@ -28,78 +87,307 @@ db_credentials.database = process.env.AWSRDS_DB;
 db_credentials.password = process.env.AWSRDS_PW;
 db_credentials.port = 5432;
 
-// create templates
-var hx = `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AA Meetings</title>
-  <meta name="description" content="Meetings of AA in Manhattan">
-  <meta name="author" content="AA">
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-       crossorigin=""/>
-</head>
-<body>
-<div id="mapid"></div>
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-   crossorigin=""></script>
-  <script>
-  var data = 
-  `;
-  
-var jx = `;
-    var mymap = L.map('mapid').setView([40.734636,-73.994997], 13);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
-    tileSize: 512,
-    maxZoom: 18,
-    zoomOffset: -1,
-    id: 'mapbox/streets-v11',
-        accessToken: 'pk.eyJ1Ijoidm9ucmFtc3kiLCJhIjoiY2pveGF1MmxoMjZnazNwbW8ya2dsZTRtNyJ9.mJ1kRVrVnwTFNdoKlQu_Cw'
-    }).addTo(mymap);
-    for (var i=0; i<data.length; i++) {
-        L.marker( [data[i].lat, data[i].lon] ).bindPopup(JSON.stringify(data[i].meetings)).addTo(mymap);
-    }
-    </script>
-    </body>
-    </html>`;
 
 
 app.get('/', function(req, res) {
-    res.send('<h3>Data structures demos</h3><ul><li><a href="/aa">aa meetings</a></li><li><a href="/temperature">temp sensor</a></li><li><a href="/processblog">process blog</a></li></ul>');
+    res.send('<link rel="stylesheet" href="css/styles.css?v=1.0"><div class ="demo"><h2 id="main">Shea Molloy DS-2020 Demo</h3><ul class="main"><li><a href="/aa">All-Access AA</a></li><li><a href="/temperature">Snekscape Sensor Data</a></li><li><a href="/processblog">Snekscape Care Data</a></li></ul></div>');
 }); 
 
 // respond to requests for /aa
 app.get('/aa', function(req, res) {
-
-    var now = moment.tz(Date.now(), "America/New_York"); 
-    var dayy = now.day().toString(); 
-    var hourr = now.hour().toString(); 
-
     // Connect to the AWS RDS Postgres database
     const client = new Pool(db_credentials);
-    
-    // SQL query 
-    var thisQuery = `SELECT lat, lon, json_agg(json_build_object('loc', mtglocation, 'address', mtgaddress, 'time', tim, 'name', mtgname, 'day', day, 'types', types, 'shour', shour)) as meetings
-                 FROM aadatall 
-                 WHERE day = ` + dayy + 'and shour >= ' + hourr + 
-                 `GROUP BY lat, lon
-                 ;`;
+    client.connect();
 
-    client.query(thisQuery, (qerr, qres) => {
-        if (qerr) { throw qerr }
-        
+    var meetingQuery = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        GROUP BY lat, long;`;
+
+    client.query(meetingQuery, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
         else {
-            var resp = hx + JSON.stringify(qres.rows) + jx;
-            res.send(resp);
+            var aaData = aatemplate({
+                meetings: qres.rows,
+                aadata: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaData)
+            // console.log(qres.rows)
+
             client.end();
-            console.log('2) responded to request for aa meeting data');
+            // console.log('responded to initial aameeting data request');
         }
     });
 });
+
+app.get('/morn', function(req, res) {
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+    client.connect();
+
+    var morn = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        AND starttime LIKE '%AM%'
+        GROUP BY lat, long;`;
+
+    client.query(morn, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
+        else {
+            var aaMorn = morntemplate({
+                meetings: qres.rows,
+                aaMorn: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaMorn)
+
+            client.end();
+            // console.log('responded to morning aameeting data request');
+        }
+    });
+});
+
+app.get('/eve', function(req, res) {
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+    client.connect();
+
+    var eve = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        AND starttime LIKE '%PM%'
+        GROUP BY lat, long;`;
+
+    client.query(eve, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
+        else {
+            var aaEve = evetemplate({
+                meetings: qres.rows,
+                aaEve: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaEve)
+
+            client.end();
+            // console.log('responded to evening aameeting data request');
+        }
+    });
+});
+
+app.get('/sun', function(req, res) {
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+    client.connect();
+
+    var sunQ = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        AND day LIKE 'Sun%'
+        GROUP BY lat, long;`;
+
+    client.query(sunQ, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
+        else {
+            var aaSun = suntemplate({
+                meetings: qres.rows,
+                aaSun: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaSun)
+
+            client.end();
+            // console.log('responded to sunday aameeting data request');
+        }
+    });
+});
+
+app.get('/mon', function(req, res) {
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+    client.connect();
+
+    var monQ = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        AND day LIKE 'Mon%'
+        GROUP BY lat, long;`;
+
+    client.query(monQ, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
+        else {
+            var aaMon = montemplate({
+                meetings: qres.rows,
+                aaMon: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaMon)
+
+            client.end();
+            // console.log('responded to mon aameeting data request');
+        }
+    });
+});
+
+app.get('/tues', function(req, res) {
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+    client.connect();
+
+    var tuesQ = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        AND day LIKE 'Tues%'
+        GROUP BY lat, long;`;
+
+    client.query(tuesQ, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
+        else {
+            var aaTues = tuestemplate({
+                meetings: qres.rows,
+                aaTues: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaTues)
+
+            client.end();
+            // console.log('responded to tues aameeting data request');
+        }
+    });
+});
+
+app.get('/wed', function(req, res) {
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+    client.connect();
+
+    var wedQ = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        AND day LIKE 'Wed%'
+        GROUP BY lat, long;`;
+
+    client.query(wedQ, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
+        else {
+            var aaWed = wedtemplate({
+                meetings: qres.rows,
+                aaWed: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaWed)
+
+            client.end();
+            // console.log('responded to wed aameeting data request');
+        }
+    });
+});
+
+app.get('/thurs', function(req, res) {
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+    client.connect();
+
+    var thursQ = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        AND day LIKE 'Thurs%'
+        GROUP BY lat, long;`;
+
+    client.query(thursQ, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
+        else {
+            var aaThurs = thurstemplate({
+                meetings: qres.rows,
+                aaThurs: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaThurs)
+
+            client.end();
+            // console.log('responded to thurs aameeting data request');
+        }
+    });
+});
+
+app.get('/fri', function(req, res) {
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+    client.connect();
+
+    var friQ = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        AND day LIKE 'Fri%'
+        GROUP BY lat, long;`;
+
+    client.query(friQ, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
+        else {
+            var aaFri = fritemplate({
+                meetings: qres.rows,
+                aaFri: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaFri)
+
+            client.end();
+            // console.log('responded to fri aameeting data request');
+        }
+    });
+});
+
+app.get('/sat', function(req, res) {
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+    client.connect();
+
+    var satQ = // MEETING LOCATION QUERY
+    `SELECT lat, long, json_agg(json_build_object('title', title, 'venue', venue, 'type', type, 'address', address, 'day', day, 'starttime', starttime, 'endtime', endtime)) as meetings
+        FROM aameetingsNY
+        WHERE lat> 40.7069
+        AND day LIKE 'Sat%'
+        GROUP BY lat, long;`;
+
+    client.query(satQ, (qerr, qres) => { 
+        if (qerr)  { throw qerr }
+
+        else {
+            var aaSat = sattemplate({
+                meetings: qres.rows,
+                aaSat: JSON.stringify(qres.rows),
+            });
+            
+            res.send(aaSat)
+
+            client.end();
+            console.log('responded to sat aameeting data request');
+        }
+    });
+});
+
+
+
+
+
 
 app.get('/temperature', function(req, res) {
 
@@ -107,24 +395,55 @@ app.get('/temperature', function(req, res) {
     const client = new Pool(db_credentials);
 
     // SQL query 
-    var q = `SELECT EXTRACT(DAY FROM sensorTime) as sensorday,
+    var avg = `SELECT EXTRACT(HOUR FROM sensorTime) as sensorhour,
              AVG(sensorValue::int) as num_obs
              FROM sensorData
-             GROUP BY sensorday
-             ORDER BY sensorday;`;
+             GROUP BY sensorhour
+             ORDER BY sensorhour;`;
 
     client.connect();
-    client.query(q, (qerr, qres) => {
+    client.query(avg, (qerr, qres) => {
         if (qerr) { throw qerr }
         else {
-            res.end(template({ sensordata: JSON.stringify(qres.rows)}));
+            // console.log(qres.rows)
+            res.end(sdtemplate({ sensordata: JSON.stringify(qres.rows)}));
             client.end();
-            console.log('1) responded to request for sensor graph');
+            // console.log('1) responded to request for sensor graph');
         }
     });
 }); 
 
-app.get('/processblog', function(req, res) {
+
+app.get('/high', function(req, res) {
+
+    // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
+
+    // SQL query 
+    var high = `SELECT EXTRACT(HOUR FROM sensorTime) as sensorhour,
+             MIN(sensorValue::int) as low_num,
+             MAX(sensorValue::int) as high_num
+             FROM sensorData
+             GROUP BY sensorhour
+             ORDER BY sensorhour;`;
+
+    client.connect();
+    client.query(high, (qerr, qres) => {
+        if (qerr) { throw qerr }
+        else {
+            console.log(qres.rows)
+            res.end(hightemplate({ highdata: JSON.stringify(qres.rows)}));
+            client.end();
+            console.log('responded to request for sensor graph');
+        }
+    });
+}); 
+
+
+
+
+
+app.get(['/processblog', '/current'], function(req, res) {
     // AWS DynamoDB credentials
     AWS.config = new AWS.Config();
     AWS.config.region = "us-east-1";
@@ -133,26 +452,137 @@ app.get('/processblog', function(req, res) {
     var dynamodb = new AWS.DynamoDB();
 
     // DynamoDB (NoSQL) query
-    var params = {
-        TableName : "aaronprocessblog",
-        KeyConditionExpression: "topic = :topic", // the query expression
+    var thisMonth = {
+        TableName : "care-blog-month",
+        KeyConditionExpression: '#mo = :month',
+        ExpressionAttributeNames: { 
+        "#mo" : "month"
+        },
         ExpressionAttributeValues: { // the query values
-            ":topic": {S: "cats"}
-        }
+            ":month": {S: "December"},
+            }
     };
-
-    dynamodb.query(params, function(err, data) {
+    
+    dynamodb.query(thisMonth, function(err, thisData) {
         if (err) {
             console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
             throw (err);
         }
         else {
-            console.log(data.Items)
-            res.end(pbtemplate({ pbdata: JSON.stringify(data.Items)}));
-            console.log('3) responded to request for process blog data');
+            // console.log(thisData.Items); // this function pulls data selected by query
+            res.end(pbtemplate({ 
+                pbdata: JSON.stringify(thisData.Items)
+                }));
+            // console.log('responded to request for process blog data');
         }
     });
 });
+
+app.get(['/last'], function(req, res) {
+    // AWS DynamoDB credentials
+    AWS.config = new AWS.Config();
+    AWS.config.region = "us-east-1";
+
+    // Connect to the AWS DynamoDB database
+    var dynamodb = new AWS.DynamoDB();
+
+    // DynamoDB (NoSQL) query
+    var thisMonth = {
+        TableName : "care-blog-month",
+        KeyConditionExpression: '#mo = :month',
+        ExpressionAttributeNames: { 
+        "#mo" : "month"
+        },
+        ExpressionAttributeValues: { // the query values
+            ":month": {S: "November"},
+            }
+    };
+    
+    dynamodb.query(thisMonth, function(err, thisData) {
+        if (err) {
+            console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
+            throw (err);
+        }
+        else {
+            // console.log(thisData.Items); // this function pulls data selected by query
+            res.end(pblasttemplate({ 
+                pbldata: JSON.stringify(thisData.Items)
+                }));
+            // console.log('responded to request for process blog data');
+        }
+    });
+});
+
+app.get(['/last1'], function(req, res) {
+    // AWS DynamoDB credentials
+    AWS.config = new AWS.Config();
+    AWS.config.region = "us-east-1";
+
+    // Connect to the AWS DynamoDB database
+    var dynamodb = new AWS.DynamoDB();
+
+    // DynamoDB (NoSQL) query
+    var thisMonth = {
+        TableName : "care-blog-month",
+        KeyConditionExpression: '#mo = :month',
+        ExpressionAttributeNames: { 
+        "#mo" : "month"
+        },
+        ExpressionAttributeValues: { // the query values
+            ":month": {S: "October"},
+            }
+    };
+    
+    dynamodb.query(thisMonth, function(err, thisData) {
+        if (err) {
+            console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
+            throw (err);
+        }
+        else {
+            // console.log(thisData.Items); // this function pulls data selected by query
+            res.end(pblast1template({ 
+                pbl1data: JSON.stringify(thisData.Items)
+                }));
+            // console.log('responded to request for process blog data');
+        }
+    });
+});
+
+app.get(['/form'], function(req, res) {
+    // AWS DynamoDB credentials
+    AWS.config = new AWS.Config();
+    AWS.config.region = "us-east-1";
+
+    // Connect to the AWS DynamoDB database
+    var dynamodb = new AWS.DynamoDB();
+
+    // DynamoDB (NoSQL) query
+    // var form = { 
+    //     TableName: "care-blog-month",
+    //     Item: {
+    //     }
+    // }
+    
+    // dynamodb.putItem(form, function(err, formData) {
+    //     if (err) {
+    //         console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
+    //         throw (err);
+        // }
+        // else {
+            // console.log(thisData.Items); // this function pulls data selected by query
+            // res.end(formtemp({ 
+            //     formdata: JSON.stringify()
+            //     }));
+            formtemp({ formdata: JSON.stringify()});
+            
+            // // console.log('responded to request for process blog data');
+        // }
+    // });
+});
+
+
+
+
 
 // serve static files in /public
 app.use(express.static('public'));
@@ -167,4 +597,3 @@ var port = process.env.PORT || 8080;
 app.listen(port, function() {
     console.log('Server listening...');
 });
-

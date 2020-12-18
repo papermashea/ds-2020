@@ -1,0 +1,19 @@
+Timestamp,Date,Fed,Watered,Cleaned,Substrate,Shed,Waste (mg),Light (watts),Location,Handling time (min),Notes
+12/8/2020 23:35:57,11/30/2020,FALSE,TRUE,FALSE,Aspen,FALSE,0,5,Living room shelf,0,Low light
+12/8/2020 23:36:31,12/4/2020,FALSE,TRUE,FALSE,Aspen,FALSE,0,5,Living room shelf,0,
+12/11/2020 22:57:07,12/10/2020,FALSE,TRUE,FALSE,Aspen,FALSE,0,0,Living room shelf,0,
+N/A,7/17/2020,TRUE,TRUE,TRUE,Cypress,FALSE,2,10,Parlor,20,
+N/A,8/8/2020,TRUE,TRUE,FALSE,Cypress,TRUE,10,10,Parlor,10,Fed in bucket
+N/A,9/2/2020,FALSE,TRUE,FALSE,Aspen,FALSE,0,10,Parlor,60,Olivia handled
+N/A,9/10/2020,TRUE,TRUE,FALSE,Aspen,TRUE,5,10,Parlor,10,Fed in bucket
+N/A,9/20/2020,FALSE,TRUE,FALSE,Aspen,TRUE,0,10,Bedroom,20,Bailey handled
+N/A,10/1/2020,TRUE,TRUE,TRUE,Fresh Aspen,FALSE,0,5,Bedroom,10,RhianFalsen handled
+N/A,10/30/2020,TRUE,TRUE,FALSE,Aspen,FALSE,10,5,Bedroom,20,Did Falset like direct morning sun
+N/A,10/31/2020,FALSE,TRUE,FALSE,Aspen,FALSE,0,5,Living room,10,Angela handled
+N/A,10/31/2020,FALSE,TRUE,FALSE,Aspen,FALSE,0,5,Living room,10,Angela handled
+N/A,11/2/2020,FALSE,TRUE,TRUE,Fresh Aspen,FALSE,0,5,Living room,10,Moved to near heating pole
+N/A,11/6/2020,FALSE,TRUE,FALSE,Aspen,FALSE,0,5,Living room,20,Out a lot
+N/A,11/8/2020,FALSE,TRUE,FALSE,Aspen,TRUE,5,5,Living room,10,Moved away from heating pole
+N/A,11/12/2020,FALSE,TRUE,FALSE,Aspen,FALSE,0,5,Living room,20,In skull!
+N/A,11/14/2020,FALSE,TRUE,TRUE,Fresh Aspen,FALSE,2,5,Living room,10,Branch added
+N/A,11/16/2020,FALSE,TRUE,FALSE,Aspen,FALSE,0,5,Living room,0,

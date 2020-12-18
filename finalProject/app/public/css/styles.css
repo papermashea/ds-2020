@@ -1,36 +1,35 @@
-#mapid { height: 760px; }
-
-table {
-  border-collapse: collapse;
-  font-family: sans-serif;
+body {
+  background-color: white;
 }
 
-table, th, td {
-  border: 1px solid black;
+.main {
+  background-color: white;
+  font-family: roboto, sans-serif;
 }
 
-h3, p {
-    font-family: sans-serif;
+h1, h2, h3, h4 {
+  font-family: roboto, sans-serif;
 }
 
-p {
-    color: red;
+h2 {
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom:20px;
 }
 
-td {
-  border-top:0pt none;
-  margin-top:0pt;
-  padding-bottom:5px;
-  padding-left:12px;
-  padding-right:12px;
-  padding-top:5px;
+p, ul {
+  line-height: 2;
+  font-family: roboto, sans-serif;
+  font-weight: 200;
 }
 
-.blinking{
-    animation:blinkingText 1.5s linear infinite;
+.demo {
+  width: 100%;
+  align-items: center;
+  margin: 5% 0 0 10%;
 }
-@keyframes blinkingText{
-  50% {
-    opacity: 0;
-  }
+
+ul.main li {
+  list-style-type: none;
+  text-align: left;
 }

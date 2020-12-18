@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Snekscape: Pet Care Tracker</title>
+  <meta name="description" content="Tracking Pet Care">
+  <meta name="author" content="Shea">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+	<link rel="stylesheet" href="css/pb.css?v=1.0">
+
+</head>
+
+<body>
+<h2 class="care">Snekscape Statuses</h3>
+<p class="care">Monitor the historical records of your creature's environment, courtesy of data you input youself. This Snekscape is recording data from <span class="pet">Plissken</span>, a 9 year old North American Corn Snake who should be <a href="https://oddlycutepets.com/how-often-to-feed-corn-snakes/" class="info">fed every 7-10 days</a> and watered regularly.</p>
+<div class="nav">
+	<div class="tabs" id="last">
+		<a href = "/current" class="month" id ="lastMonth"><p>December</p></a>
+	</div>
+	
+	<div class="tabs" id="last">
+	    <a href = "/last" class="month" id="lastMonth"><p>November</p></a>
+	</div>    
+	
+	<div class="tabs" id="current">
+	    <a href = "/last1" class="month" id="currentMonth"><p>October 👇 </p></a>
+	</div>
+
+</div>
+
+<script>
+var data = {{{pbl1data}}};
+
+var myTable = '<table><thead><tr><th></th><th>Fed</th><th>Watered</th><th>Shed</th></tr></thead><tbody>';
+
+for (var i=0; i < data.length; i++) {
+	myTable += '<tr class="record">';
+	myTable += '<td class="dateRec">' + '<p class = "date">' + data[i].date.S + '</td>';
+	// myTable += '<td' + data[i].fed.BOOL + '</td>';
+	// myTable += '<td>' + data[i].watered.BOOL + '</td>';
+	// myTable += '<td>' + data[i].shed.BOOL + '</td>';
+
+	  if (data[i].fed.BOOL) {
+	    	myTable += '<td class="true">' + '💚' + '</td>' 
+	  }else {
+	  	myTable += '<td class="blinking">'+ '<span class="tooltip"><span class="tooltiptext">Needs to be fed!</span>' + '🔴' + '</span></td>' 
+	  };
+
+	  if (data[i].watered.BOOL) {
+	    	myTable += '<td class="true">' + '💚' + '</td>' 
+	  }else {
+	  	myTable += '<td class="blinking">'+ '<span class="tooltip"><span class="tooltiptext">Needs to be watered!</span>' + '🔴' + '</span></td>' 
+	  };
+	  
+  	  if (data[i].shed.BOOL) {
+	    	myTable += '<td class="true">' + '💚' + '</td>' 
+	  }else {
+	  	myTable += '<td class="blinking">'+ '<span class="tooltip"><span class="tooltiptext">Should shed soon!</span>' + '🔴' + '</span></td>' 
+	  };
+  
+	myTable += '</tr>';
+	myTable += '<tr class="details">';
+	myTable += '<td class="details" id="loc">' + 'Location: ' + data[i].loc.S + '</td>';
+	myTable += '</tr>';
+	myTable += '<tr class="details">';
+	myTable += '<td class="details" id="sub">' + 'Substrate: ' + data[i].substrate.S + '</td>';
+	myTable += '</tr>';
+	myTable += '<tr class="details">';
+	myTable += '<td class="details" id="notes">' + 'Note: ' + data[i].notes.S + '</td>';
+	myTable += '</tr>';
+}
+
+
+myTable += '</body></table>'
+
+$(window).on('load', function() {
+  $("#myEntries").html(myTable)
+});
+
+</script>
+
+
+<div id='myEntries'></div>
+
+<h5 class="track"><a href="/form">Track your care data *️⃣</a></h3
+
+</body>
+</html>

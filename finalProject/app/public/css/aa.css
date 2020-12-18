@@ -1,0 +1,169 @@
+/* PAGE */
+body {
+  background-color: white;
+}
+
+#mapid { 
+  height: 1000px;
+  width: 80%;
+  float: left;
+}
+
+.map {
+  width: 100%;
+  height: 80%;
+}
+
+.filters {
+  height: 100%;
+  width: 20%;
+  float: left;  
+}
+
+.days a {
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+  float: left;
+  text-align: center;
+  padding: 20px 0px;
+  color: white;
+  vertical-align: middle
+}
+
+#sun {
+  background-color:#AB65FD;
+}
+
+#mon {
+  background-color:#AAFFF5;
+}
+
+#tues {
+  background-color:#AAFFB1;
+}
+
+#wed {
+  background-color:#F2F252;
+}
+
+#thurs {
+  background-color:#FFAE40;
+}
+
+#fri {
+  background-color:#FF4040;
+}
+
+#sat {
+  background-color:#FF40C4;
+}
+
+.times {
+  font-family: roboto, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  width: 100%;
+  float: left;
+  text-align: center;
+  line-height: 2;
+  color: black;
+  text-decoration: none;
+  font-style: italic;
+  margin-bottom: 20px;
+  height: 125px;
+}
+
+.morning, .evening {
+  height: 50;
+  line-height: 2;
+  padding: 50px 0px 0px 0px;
+}
+
+.info {
+  color: white;
+  background-color: black;
+  margin-top: 100px;
+  text-align: right;
+  float: left;
+  width: 100%;
+}
+
+.info p .info ul {
+  width: 80%;
+  float: right;
+}
+
+#maptitle {
+  width: 100%;
+  height: 150px;
+  background-color: #f0f0f0;
+  color: black;
+  float: left;
+  text-align: left;
+  padding-left: 5%;
+}
+
+/* TYPE */
+
+h1 {
+  line-height: 2;
+  font-family: roboto, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: white!important;
+  text-decoration: underline;
+  padding: 10px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 a {
+  color: red!importantimportant;
+}
+
+.maptitle a:active, .maptitle a:visited {
+  color:red;
+  text-decoration: none;
+}
+
+
+p, ul {
+  line-height: 1;
+  font-family: roboto, sans-serif;
+  font-weight: 200;
+}
+
+.leaflet-container .pop { 
+  line-height: 1;
+  font-family: roboto, sans-serif;
+  font-weight: 200;
+}
+
+.leaflet-container #title {
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+}
+
+.leaflet-container #type {
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.leaflet-popup-close-button {
+  display: none;
+}
+
+.leaflet-popup-content p {
+  margin: 0;
+}
+
+.info p {
+  font-weight: 400;
+}
+

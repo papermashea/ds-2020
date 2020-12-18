@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AA Meetings</title>
+  <meta name="description" content="All Access AA">
+  <meta name="author" content="AA">
+  <link rel="stylesheet" href="css/aa.css?v=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+       crossorigin=""/>
+  <link rel="stylesheet" href="https://use.typekit.net/vgq7iln.css">
+  <script src="/assets/jquery.min.js"></script>
+
+
+</head>
+<body
+<div class="map"></div>
+<div id="mapid"></div>
+<div class="filters">
+    <div class="days">
+        <a href="/sun" class="weekend" id="sun">Sunday</a>
+        <a href="/mon" class="weekday" id="mon">Monday</a>
+        <a href="/tues" class="weekday" id="tues">Tuesday</a>
+        <a href="/wed" class="weekday" id="wed">Wednesday</a>
+        <a href="/thurs" class="weekday" id="thurs">Thursday</a>
+        <a href="/fri" class="weekend" id="fri">Friday</a>
+        <a href="/sat" class="weekend" id="sat">Saturday</a>
+    </div>
+    <div class="times">
+        <div class ="morning"><a href="/morn" class="time" id="morn">☀️ Morning Meetings 🔎</a></div>
+        <div class ="evening"><a href="/eve" class="time" id="eve"> 🌚 Evening Meetings 🔎</a></div>
+    </div>
+    <div class ="info">
+        <p> Look for the meeting that's right for you! We've marked meetings for various levels of experience, such as:</p>
+        <ul>
+            <li>B = Beginner</li>
+            <li>OD = Open Discussion</li>
+            <li>S = Step</li>
+            <li>O = Open</li>
+            <li>C = Closed Discussion</li>
+            <li>BB = Big Book</li>
+        </ul>
+    </div>
+</div>
+<div id="maptitle"><h1><a href="/aa">AA Meetings in NYC</a></h1></div>
+
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+<script src="/assets/js/materialize.min.js"></script>
+<script>    
+var data = {{{aadata}}};
+// console.log(data)
+
+// var deets = {{{meetings}}};
+// console.log(deets);
+
+var mainIcon = L.icon({
+    iconUrl: 'images/mapicon_blk.png',
+    iconSize:     [20], // size of the icon
+});
+
+var mymap = L.map('mapid').setView([40.734636,-73.994997], 13);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
+    tileSize: 512,
+    maxZoom: 18,
+    zoomOffset: -1,
+    id: 'papermashea/cki6v60o21lgr19plgjgs87o4',
+        accessToken: 'pk.eyJ1IjoicGFwZXJtYXNoZWEiLCJhIjoiY2szbnh6bGI4MXY1cjNjbjFkMnZvcjQ1ayJ9.MKO-bDpbg-5sZ2sIN8MJ5Q'
+    }).addTo(mymap);
+    for (var i=0; i<data.length; i++) {
+        for (var x=0; x<data[i].meetings.length; x++) {
+                L.marker([data[i].lat, data[i].long]
+                ,{icon: mainIcon}).addTo(mymap)
+                // ).addTo(mymap)
+                .bindPopup(
+                    '<p class="pop" id="title">'+ data[i].meetings[x].title +'<p>' +
+                    '<p class="pop" id="type">'+ 'Meeting Type: ' + data[i].meetings[x].type +'<p>' +
+                    '<p class="pop" id="day">'+ data[i].meetings[x].day +'<p>' +
+                    '<p class="pop" id="time">'+ data[i].meetings[x].starttime + ' - ' + data[i].meetings[x].endtime +'<p>')
+                    // .addTo(mymap);
+             };
+        };
+        
+
+    // $.post( "ajax/types", function( data ) {
+    //   $( "#types" ).val();
+    // });
+    
+    //     <h2> Meetings types:</h2>
+    //     <select id="types" name="types">
+    //       <option value="b">B = Beginnger</option>
+    //       <option value="od">OD = Open Discussion</option>
+    //       <option value="s">S = Step</option>
+    //     <option value="o">O = Open</option>
+    //       <option value="c">C = Closed Discussion</option>
+    //       <option value="bb">BB = Big Book</option>
+    //     </select>
+    // </div>
+
+        
+</script>
+</div>
+</body>
+</html>
