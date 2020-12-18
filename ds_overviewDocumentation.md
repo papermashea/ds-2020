@@ -1,23 +1,24 @@
 ## Data Structures Assignment Documentation
 
-**Please note that halfway through the semester I updated my method of using a "master" branch for all my work to using a "main" branch for all my work. Documentation below has been updated**
+**Please note that halfway through the semester I updated my method of using a "master" branch for all my work to using a "main" branch for all my work. Documentation below has been updated**  
 
 
 
-### Notes & Resources
+
+## Notes & Resources
 Resources and thoughts for this class are kept in an ongoing series of weekly notes
 
 - [Class notes](https://docs.google.com/document/d/1TGFFYZfXPyAZpap8FBsq6vD8KSEmiB03ksjBFRtsUbQ/edit?usp=sharing "Data Structures Fall 2020 Discussions - Shea Molloy")
 - [Reading notes](https://docs.google.com/document/d/1E5LFa9ca3eHIMyJJ-Hp2Cqr9vzC6MIaB-KGju7nFn4w/edit?usp=sharing "Data Structures Fall 2020 Readings - Shea Molloy")
 - [IEEE Review | Data Visceralization: Enabling Deeper Understanding of Data Using Virtual Reality](https://github.com/papermashea/ds-2020/tree/main/ieee-vis "Data Visceralization Paper")
-- Designs : https://xd.adobe.com/view/f46b4963-86e3-431b-a40d-d00773afc64b-a138/?fullscreen
+- Designs : https://xd.adobe.com/view/f46b4963-86e3-431b-a40d-d00773afc64b-a138/?fullscreen  
 
 
 
 
 ## Presentations
 - [Discussion Lead 1: Paper As Passion](https://docs.google.com/document/d/11zYqZp_TxuLrwfQAd7jegNX4pO5cocWW5BpTvMIuq_M/edit#  "Notes on Notes")
-- [Discussion Lead 2: Data Janitors](https://xd.adobe.com/view/f46b4963-86e3-431b-a40d-d00773afc64b-a138/?fullscreen "Data Janitors Overview and Debate")
+- [Discussion Lead 2: Data Janitors](https://xd.adobe.com/view/f46b4963-86e3-431b-a40d-d00773afc64b-a138/?fullscreen "Data Janitors Overview and Debate")  
 
 
 
@@ -26,9 +27,9 @@ Resources and thoughts for this class are kept in an ongoing series of weekly no
 - [Full app demo](https://github.com/papermashea/ds-2020/blob/main/finalProject/SheaMolloy_DS2020.mp4 "Full app demo")
 - [AA map walk through](https://github.com/papermashea/ds-2020/blob/main/finalProject/1.aaMap_walkthrough.mov "AA map walk through")
 - [Sensor data walk through]("https://github.com/papermashea/ds-2020/blob/main/finalProject/2.sensorData_walkthrough.mov" "Sensor data walk through")
-- [Process blog walk through](https://github.com/papermashea/ds-2020/blob/main/finalProject/3.processBlog_walkthrough.mov "Process blog walk through")
+- [Process blog walk through](https://github.com/papermashea/ds-2020/blob/main/finalProject/3.processBlog_walkthrough.mov "Process blog walk through")  
 
-*Final app code available [here](https://github.com/papermashea/ds-2020/tree/main/finalProject "Final app code")*
+**Final app code available [here](https://github.com/papermashea/ds-2020/tree/main/finalProject "Final app code")**  
 
 
 
